@@ -15,7 +15,11 @@ Check if it's destroy bush or cut grass.
 
 params ["_player"];
 
-if !([_player] call ace_trenches_fnc_canDigTrench) exitWith {false};
+if (
+    ClearBrush_requireEntrenchingTool &&
+    {!("ACE_EntrenchingTool" in (_player call ace_common_fnc_uniqueItems))}
+) exitWith {false};
+if !([_player] call ace_common_fnc_canDig) exitWith {false};
 
 private _position0 = AGLToASL positionCameraToWorld [0, 0, 0];
 private _position1 = AGLToASL positionCameraToWorld [0, 0, 2];
