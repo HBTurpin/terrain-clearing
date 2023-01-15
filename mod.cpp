@@ -1,0 +1,12 @@
+name = "Brush Clearing";
+picture = "logo_abc_ca.paa";
+actionName = "GitHub";
+action = "https://github.com/ampersand38/brush-clearing";
+description = "Clear Brush action for getting rid of bushes and grass with ACE Entrenching Tool.";
+logo = "logo_abc_ca.paa";
+logoOver = "logo_abc_ca.paa";
+tooltip = "Brush Clearing";
+tooltipOwned = "Brush Clearing";
+overview = "Clear Brush action for getting rid of bushes and grass with ACE Entrenching Tool.";
+author = "Ampersand";
+overviewPicture = "logo_abc_ca.paa";

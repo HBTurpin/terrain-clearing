@@ -1,0 +1,2 @@
+PREP(canClearBrush);
+PREP(ClearBrush);
