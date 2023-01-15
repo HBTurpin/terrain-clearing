@@ -10,7 +10,7 @@ Check if it's destroy bush or cut grass.
 * -
 
 * Example:
-* [player] call ClearBrush_fnc_canClearBrush
+* [player] call abc_main_fnc_canClearBrush
 */
 
 params ["_player"];

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
-* Author: Ampers
+* Author: Ampersand
 * Destroy a bush or place a grass cutter
 *
 * Arguments:
@@ -10,12 +10,10 @@
 * -
 *
 * Example:
-* [] call ClearBrush_fnc_clearBrush
+* [] call abc_main_fnc_clearBrush
 */
 
-if !(_unit call EFUNC(common,isSwimming)) then {
-    [_unit, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
-};
+ "ace_gestures_cover" call ace_gestures_fnc_playSignal;
 
 private _position0 = AGLToASL positionCameraToWorld [0, 0, 0];
 private _position1 = AGLToASL positionCameraToWorld [0, 0, 2];
@@ -28,7 +26,17 @@ if (_intersections isEqualTo []) exitWith {};
 
 if (_intersectObj isEqualTo objNull && {_parentObject isEqualTo objNull}) then {
 	//terrain, spawn grass cutter
-	createVehicle ["Land_ClutterCutter_small_F", ASLtoAGL _intersectPosASL, [], 0, "CAN_COLLIDE"];
+    private _existing = _intersectPosASL nearestObject "Land_ClutterCutter_small_F";
+    private _distance = 1;
+    private _cutter = "Land_ClutterCutter_small_F";
+    if (_existing != objNull) then {
+        _distance = _existing distance ASLtoAGL _intersectPosASL;
+    };
+    if (_distance < 0.5) then {
+        _cutter = "Land_ClutterCutter_medium_F";
+    };
+
+	createVehicle [_cutter, ASLtoAGL _intersectPosASL, [], 0, "CAN_COLLIDE"];
 } else {
 	//not terrain
 	if !((nearestTerrainObjects [ _intersectObj , ["Bush"], 0]) isEqualTo [] ) then {
