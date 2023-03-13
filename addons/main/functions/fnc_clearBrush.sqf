@@ -13,7 +13,7 @@
 * [] call abc_main_fnc_clearBrush
 */
 
- "ace_gestures_cover" call ace_gestures_fnc_playSignal;
+"ace_gestures_cover" call ace_gestures_fnc_playSignal;
 
 private _position0 = AGLToASL positionCameraToWorld [0, 0, 0];
 private _position1 = AGLToASL positionCameraToWorld [0, 0, 2];
