@@ -1,0 +1,19 @@
+name = "Brush Clearing"
+prefix = "abc"
+mainprefix = "z"
+
+[properties]
+author = "Ampersand"
+url = "https://github.com/ampersand38"
+
+[files]
+include = [
+    "AUTHORS.txt",
+    "LICENSE",
+    "logo_abc_ca.paa",
+    "mod.cpp",
+    "README.md"
+]
+
+[asc]
+enabled = true

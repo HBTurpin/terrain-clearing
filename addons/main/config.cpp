@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_trenches"};
+        requiredAddons[] = {"ace_trenches", "ace_gestures"};
         author = "Ampersand";
         authors[] = {"Ampersand"};
         url = "https://github.com/ampersand38/Brush-Clearing";
@@ -16,3 +16,4 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgVersioning.hpp"

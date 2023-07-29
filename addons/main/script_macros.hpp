@@ -2,7 +2,6 @@
 
 #define DEBUG_SYNCHRONOUS
 #include "\x\cba\addons\main\script_macros_common.hpp"
-#include "\x\cba\addons\xeh\script_xeh.hpp"
 
 // Default versioning level
 #define DEFAULT_VERSIONING_LEVEL 2
@@ -117,7 +116,7 @@
 #define PFORMAT_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) \
     format ['%1: A=%2, B=%3, C=%4, D=%5, E=%6, F=%7, G=%8, H=%9, I=%10 J=%11', MESSAGE, RETNIL(A), RETNIL(B), RETNIL(C), RETNIL(D), RETNIL(E), RETNIL(F), RETNIL(G), RETNIL(H), RETNIL(I), RETNIL(J)]
 #ifdef DEBUG_MODE_FULL
-#define TRACE_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) \
+    #define TRACE_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) \
     [THIS_FILE_, __LINE__, PFORMAT_10(MESSAGE,A,B,C,D,E,F,G,H,I,J)] call CBA_fnc_log
 #else
    #define TRACE_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) /* disabled */
