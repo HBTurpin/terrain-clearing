@@ -4,7 +4,7 @@ mainprefix = "z"
 
 [properties]
 author = "Ampersand"
-url = "https://github.com/ampersand38"
+url = "https://github.com/ampersand38/Brush-Clearing"
 
 [files]
 include = [
