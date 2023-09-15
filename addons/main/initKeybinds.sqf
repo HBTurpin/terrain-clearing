@@ -4,7 +4,5 @@
     // Clear brush if possible
     if (_player call FUNC(canClearBrush)) then {
         _player call FUNC(clearBrush);
-
-        true
     };
 }, {}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
