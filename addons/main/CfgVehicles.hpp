@@ -12,6 +12,15 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = "\a3\modules_f\data\hideterrainobjects\icon32_ca.paa";
                 };
+				class GVAR(cutTree) {
+                    displayName = "Cut Tree";
+                    condition = QUOTE(_player call FUNC(canCutTree));
+                    // Wait a frame to handle "Do When releasing action menu key" option
+                    statement = QUOTE([ARR_2({_this call FUNC(canCutTree)},_player)] call CBA_fnc_execNextFrame);
+                    exceptions[] = {};
+                    showDisabled = 0;
+                    icon = "\a3\modules_f\data\hideterrainobjects\icon32_ca.paa";
+                };
             };
         };
     };
