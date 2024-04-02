@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
-Author: Ampersand, johnb43
+Author: Ampersand, johnb43, HBTurpin
 Check if a local unit can destroy bush or cut grass.
 
 * Arguments:
